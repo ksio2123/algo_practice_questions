@@ -1,5 +1,4 @@
 const assert = require('assert');
-// import assert from 'node:assert';
 
 /**
  * @param {number[][]} grid
