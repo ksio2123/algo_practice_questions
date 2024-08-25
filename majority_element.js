@@ -17,4 +17,27 @@ var majorityElement = function(nums) {
     return res;
 };
 
+//Boyer-Moore Voting Algorithm
+var majorityElement2 = function(nums) {
+    let count = 1;
+    let res = nums[0];
+    for (let i = 1; i < nums.length; i++) {
+        let num = nums[i];
+        if (num === res) {
+            count++;
+            continue;
+        }
+        // not equal
+        count--;
+        if (count === 0) {
+            count = 1;
+            res = num;
+        }
+    }
+
+    return res;
+};
+
+
 assert(majorityElement([3,2,3]) === 3)
+assert(majorityElement2([3,2,3]) === 3)
