@@ -1,4 +1,4 @@
-const assert = require('assert')
+import * as assert from 'assert'
 
 function findXSum(nums: number[], k: number, x: number): number[] {
   // find freq map
